@@ -1,3 +1,3 @@
-import { mensagemCifrada } from "./cifra.js";
+import { mensagemCifrada } from "./src/cifra/cifra.js";
 
 console.log(mensagemCifrada);
