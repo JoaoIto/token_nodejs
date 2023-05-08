@@ -15,11 +15,11 @@ class User {
 
     auth(name, password){
         if(this.name == name && this.hash == hashCreate(password)){
-            return true;
             console.log("Sucess!")
+            return true;
         }else{
-            return false;
             console.log("Fail! Not a true user!")
+            return false;
         }
     }
 }
