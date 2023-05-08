@@ -27,4 +27,5 @@ class User {
 const user = new User("Joao", "23082005");
 console.log(user);
 
-export let userAuth = user.auth;
+export let userAuth = user.auth("Joao", "23082005");
+export let userAuthFake = user.auth("Joao", "2204582905");
