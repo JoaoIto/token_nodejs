@@ -23,3 +23,8 @@ class User {
         }
     }
 }
+
+const user = new User("Joao", "23082005");
+console.log(user);
+
+export let userAuth = user.auth;
