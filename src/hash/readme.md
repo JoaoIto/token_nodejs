@@ -60,11 +60,14 @@ O problema, é que como o hash, é apenas, ***um endereço de memória onde é g
 
 A próxima implementação, fará uma implementação que criará uma hash, e ainda com um dado a mais, que fará essa hash muito mais complexa, e assim mais difícil de ser descoberta. Para isso, usaremos as funções de: (scryptSync, randomBytes, timingSafeEqual,).
 
-- ***`scryptSync()`***: 
+- ***`scryptSync()`***:Gera um hash junto com esse sal para uma somente hash de senha; 
 
-- ***`randomBytes()`***:
+- ***`randomBytes()`***: Gera esse sal aleatório, passando como parâmetro, seu tamanho, que no caso, é de 16 bytes;
 
-- ***`timingSafeEqual()`***:
+- ***`timingSafeEqual()`***: Faz a verificação a partir de temporização se é verdade a condição as duas variáveis de buffer
+
+- ***`Buffer.from(this.hash.trim(), "hex")`***: Cria um Buffer e depois transforma para hexadecimal, ele converte o valor de hash armazenado na instância do objeto User de uma string hexadecimal em um buffer de bytesbasicamnente serve. Ela também remove qualquer espaço em branco da string de hash usando o método ``trim()``;
+
 
 ### Resultado: 
 ```js
