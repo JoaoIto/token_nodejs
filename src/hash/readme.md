@@ -81,4 +81,6 @@ User {
 
 Este resultado, mostra o quão a hash se torna impossível de ser linda, e assim criando 2 hashs, uma crypto ainda para essa senha, mais a própria hash que foi para a senha.
 
+Por ser aleatório e modificar toda e qualquer senha, o “sal” na função de hash faz com que senhas iguais tenham hashes diferentes, fazendo com que atacantes não consigam realizar o ataque de rainbow table por não identificar senhas a partir de hashes gerados, pois toda senha terá um hash diferente. Isso dificulta muito o ataque por fazer com que os atacantes tenham que adivinhar não mais apenas a senha, como também o “sal” utilizado para gerar a hash da senha, acarretando em infinitas combinações extremamente difíceis de serem acertadas.
+
 ---
