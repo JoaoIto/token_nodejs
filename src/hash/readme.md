@@ -65,3 +65,17 @@ A próxima implementação, fará uma implementação que criará uma hash, e ai
 - ***`randomBytes()`***:
 
 - ***`timingSafeEqual()`***:
+
+### Resultado: 
+```js
+Hash crypto:
+User {
+  name: 'Joao',
+  crypto: '40624019f88a40f368cdfae9ab217c9a',
+  hash: " 'ϻ�o��+).�UJփ���tg���ѝ\x1D��lƐDPt�5\f���㡽\x17��@�\f֩�Ix\rM��ψ"
+}
+```
+
+Este resultado, mostra o quão a hash se torna impossível de ser linda, e assim criando 2 hashs, uma crypto ainda para essa senha, mais a própria hash que foi para a senha.
+
+---

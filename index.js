@@ -1,6 +1,6 @@
 import { mensagemCifrada } from "./src/cifra/cifra.js";
 import { hashConsole, userAuth, userAuthFake } from "./src/hash/hash.js";
-import { user } from "./src/hash/hashCrypto.js";
+import { user, userCorr } from "./src/hash/hashCrypto.js";
 
 console.log("Mensagem cifra");
 console.log(mensagemCifrada);
@@ -14,3 +14,5 @@ console.log(userAuthFake);
 console.log("\n\n");
 console.log("Hash crypto: ");
 console.log(user);
+console.log("Hash crypto auth(): ");
+console.log(userCorr)
