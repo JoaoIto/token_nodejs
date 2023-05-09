@@ -15,5 +15,5 @@ class User {
   }
 }
 
-const user = new User("Joao", "23082005");
+export const user = new User("Joao", "23082005");
 console.log(user);
