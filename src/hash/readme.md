@@ -15,3 +15,53 @@ As funções de hash apresentam algumas propriedades em momento de execução e 
 - Tamanho fixo: Apresentar um tamanho de caracteres físico;
 
 ---
+
+# Code:
+
+Este é um código comum, feito para a criação de uma hash na senha de usuário, e assim depois, ele consegue comparar simplesmente esta hash criada para a senha desenvolvida.
+
+```js
+import { createHash } from "crypto";
+
+function hashCreate(pwrd){
+    return createHash('sha256').update(pwrd).digest('hex');
+}
+
+export let hashConsole = hashCreate("stro stro stro");
+
+
+class User {
+    constructor(name, password){
+        this.name = name;
+        this.hash = hashCreate(password);
+    }
+
+    auth(name, password){
+        if(this.name == name && this.hash == hashCreate(password)){
+            console.log("Sucess!")
+            return true;
+        }else{
+            console.log("Fail! Not a true user!")
+            return false;
+        }
+    }
+}
+
+const user = new User("Joao", "23082005");
+console.log(user);
+
+export let userAuth = user.auth("Joao", "23082005");
+export let userAuthFake = user.auth("Joao", "2204582905");
+```
+
+O problema, é que como o hash, é apenas, ***um endereço de memória onde é guardada aquela senha, gerada a partir de uma função!*** Sendo assim, um usuário atacante, pode simplemente entender que ele precisa chutar este endereço, podendo entender que várias hash's criadas, uma dela traduzida, se fala da senha original criada.
+
+### **Criando hash mais implemental:**
+
+A próxima implementação, fará uma implementação que criará uma hash, e ainda com um dado a mais, que fará essa hash muito mais complexa, e assim mais difícil de ser descoberta. Para isso, usaremos as funções de: (scryptSync, randomBytes, timingSafeEqual,).
+
+- ***`scryptSync()`***: 
+
+- ***`randomBytes()`***:
+
+- ***`timingSafeEqual()`***:
