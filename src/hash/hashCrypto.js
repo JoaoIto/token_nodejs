@@ -1,9 +1,9 @@
-import { scryptSync, randomBytes, timingSafeEqual, createHash } from "crypto";
+import { scryptSync, randomBytes, timingSafeEqual } from "crypto";
 
 function hashCreate(pasw) {
-  const crypto = randomBytes(16).toString('hex');
-  const paswHash = scryptSync(pasw, crypto, 64).toString('hex');
-  return `${crypto}: ${paswHash}`;
+  const salt = randomBytes(16).toString('hex');
+  const paswHash = scryptSync(pasw, salt, 64).toString('hex');
+  return `${salt}: ${paswHash}`;
 }
 
 export let hashConsole = hashCreate("stro stro stro");
@@ -11,11 +11,11 @@ export let hashConsole = hashCreate("stro stro stro");
 class User {
   constructor(name, password) {
     this.name = name;
-    [this.crypto, this.hash] = hashCreate(password).split(":");
+    [this.salt, this.hash] = hashCreate(password).split(":");
   }
 
   auth(name, password) {
-    const testHash = scryptSync(password, this.crypto, 64);
+    const testHash = scryptSync(password, this.salt, 64);
     const realHash = Buffer.from(this.hash.trim(), "hex");
 
     console.log("testHash:", testHash);
