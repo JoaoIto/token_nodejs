@@ -66,7 +66,7 @@ A próxima implementação, fará uma implementação que criará uma hash, e ai
 
 - ***`timingSafeEqual()`***: Faz a verificação a partir de temporização se é verdade a condição as duas variáveis de buffer
 
-- ***`Buffer.from(this.hash.trim(), "hex")`***: Cria um Buffer e depois transforma para hexadecimal, ele converte o valor de hash armazenado na instância do objeto User de uma string hexadecimal em um buffer de bytesbasicamnente serve. Ela também remove qualquer espaço em branco da string de hash usando o método ``trim()``;
+- ***`Buffer.from(this.hash.trim(), 'hex')`***: Cria um Buffer e depois transforma para hexadecimal, ele converte o valor de hash armazenado na instância do objeto User de uma string hexadecimal em um buffer de bytesbasicamnente serve. Ela também remove qualquer espaço em branco da string de hash usando o método ``trim()``;
 
 
 ### Resultado: 
@@ -77,7 +77,7 @@ User {
   crypto: '40624019f88a40f368cdfae9ab217c9a',
   hash: " 'ϻ�o��+).�UJփ���tg���ѝ\x1D��lƐDPt�5\f���㡽\x17��@�\f֩�Ix\rM��ψ"
 }
-```
+```  
 
 Este resultado, mostra o quão a hash se torna impossível de ser linda, e assim criando 2 hashs, uma crypto ainda para essa senha, mais a própria hash que foi para a senha.
 
