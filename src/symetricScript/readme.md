@@ -74,3 +74,16 @@ export const cypherMsg = cifra.update(msg, "utf-8", "hex") + cifra.final('hex');
 
 ---
 
+## Descriptografando
+
+Usando ainda o módulo de importação crypto, usaremos a função de ***`createDecypheriv()`*** para formar um decifrador através de aes256.
+
+```js
+const descrypt = createDecipheriv('aes256', key, vi);
+
+export const msgDescrypt =
+  descrypt.update(cypherMsg, "hex", "utf-8") + descrypt.final("utf-8");
+
+```
+
+---
