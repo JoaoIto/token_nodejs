@@ -10,6 +10,10 @@
 
 ## Código: 
 
+Usaremos a função de gerar e descriptografar cada tipo de chave que escrevemos, (pública e privada).
+
+- Documentação funções de cypto: ***[generateKeyPairSync, publicEncrypt, privateDecrypt } from "crypto";](https://nodejs.org/api/crypto.html)***
+
 ```js
 import { generateKeyPairSync, publicEncrypt, privateDecrypt } from "crypto";
 
