@@ -2,6 +2,7 @@ import { mensagemCifrada } from "./src/cifra/cifra.js";
 import { hashConsole, userAuth, userAuthFake } from "./src/hash/hash.js";
 import { user, userCorr } from "./src/hash/hashCrypto.js";
 import { cypherMsg, msgDescrypt } from "./src/symetricScript/symetricScript.js"
+import { privateKey, publicKey } from "./src/asymetricScript/asymetricScript.js";
 
 console.log("Mensagem cifra");
 console.log(mensagemCifrada);
@@ -20,3 +21,7 @@ console.log(userCorr)
 console.log("\n\n");
 console.log(cypherMsg);
 console.log(msgDescrypt);
+console.log("\n\n");
+console.log("Private Key: " + privateKey);
+console.log("Public Key: " + publicKey);
+console.log("\n\n");
