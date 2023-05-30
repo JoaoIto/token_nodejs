@@ -23,4 +23,6 @@ Outro cenário menos comum **é um terceiro obter o identificador e se passar pe
 
 Quando o usuário for fazer uma requisição, ele vai mandar esse token de volta e ao invés do servidor pesquisar e localizar esse ID, **ele simplesmente valida o token, ou seja, vai decifrar a informação**.
 
+<img src="../../.github/token.png">
+
 ---
