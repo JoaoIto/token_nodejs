@@ -8,3 +8,8 @@ Quando temos um documento, e queremos assiná-lo digitalmente, **somente fizemos
 
 ## Código: 
 
+Usando a mesma lógica das chaves privadas e chaves públicas, usaremos ela diferentemente para cada função dentro do código.
+
+```js
+
+```
